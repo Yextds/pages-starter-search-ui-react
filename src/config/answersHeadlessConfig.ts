@@ -1,11 +1,11 @@
-// import { AnswersHeadlessProvider } from '@yext/search-headless-react';
+
 import {
   provideHeadless,
   HeadlessConfig,
   SandboxEndpoints,
 } from "@yext/search-headless-react";
 
-export const answersHeadlessConfig: HeadlessConfig = {
+export let answersHeadlessConfig: HeadlessConfig = {
   apiKey: "ecbf37a4304b6b390687f68f697210e5",
   experienceKey: "mgm-timber-m",
   locale: "en",

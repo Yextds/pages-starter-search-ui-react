@@ -31,6 +31,7 @@ import {
 import { ArticlesCard } from '../components/cards/ArticlesCard';
 import Navigation from '../components/Navigation';
 import PageLayout from "../components/PageLayout";
+import { answersHeadlessConfig } from '../config/answersHeadlessConfig';
 
 /**
  * Not required depending on your use case.
@@ -76,23 +77,8 @@ export const getHeadConfig: GetHeadConfig<
   };
 };
 
-const headlessConfig: HeadlessConfig = {
-  apiKey: "ecbf37a4304b6b390687f68f697210e5",
-  experienceKey: "mgm-timber-m",
-  locale: "en",
-  sessionTrackingEnabled: true,
-  verticalKey: "articles",
-  endpoints: {
-    universalSearch: "https://liveapi-sandbox.yext.com/v2/accounts/me/answers/query",
-    verticalSearch: "https://liveapi-sandbox.yext.com/v2/accounts/me/answers/vertical/query",
-    questionSubmission: "https://liveapi-sandbox.yext.com/v2/accounts/me/createQuestion",
-    universalAutocomplete: "https://liveapi-sandbox.yext.com/v2/accounts/me/answers/autocomplete",
-    verticalAutocomplete: "https://liveapi-sandbox.yext.com/v2/accounts/me/answers/vertical/autocomplete",
-    filterSearch: "https://liveapi-sandbox.yext.com/v2/accounts/me/answers/filtersearch"
-  },
-};
-
-const searcher = provideHeadless(headlessConfig);
+answersHeadlessConfig.verticalKey = "articles";
+const searcher = provideHeadless(answersHeadlessConfig);
 
 const ArticlesPage: Template<TemplateRenderProps> = ({
   relativePrefixToRoot,

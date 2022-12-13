@@ -31,6 +31,7 @@ import { universalResultsConfig } from '../config/universalResultsConfig';
 import UniversalResults from '../components/UniversalResults';
 import Navigation from '../components/Navigation';
 import PageLayout from "../components/PageLayout";
+import { answersHeadlessConfig } from '../config/answersHeadlessConfig';
 
 const universalResultsFilterConfig = {
   show: true
@@ -81,22 +82,7 @@ export const getHeadConfig: GetHeadConfig<
   };
 };
 
-const headlessConfig: HeadlessConfig = {
-  apiKey: "ecbf37a4304b6b390687f68f697210e5",
-  experienceKey: "mgm-timber-m",
-  locale: "en",
-  sessionTrackingEnabled: true,  
-  endpoints: {
-    universalSearch: "https://liveapi-sandbox.yext.com/v2/accounts/me/answers/query",
-    verticalSearch: "https://liveapi-sandbox.yext.com/v2/accounts/me/answers/vertical/query",
-    questionSubmission: "https://liveapi-sandbox.yext.com/v2/accounts/me/createQuestion",
-    universalAutocomplete: "https://liveapi-sandbox.yext.com/v2/accounts/me/answers/autocomplete",
-    verticalAutocomplete: "https://liveapi-sandbox.yext.com/v2/accounts/me/answers/vertical/autocomplete",
-    filterSearch: "https://liveapi-sandbox.yext.com/v2/accounts/me/answers/filtersearch"
-  },
-};
-
-const searcher = provideHeadless(headlessConfig);
+const searcher = provideHeadless(answersHeadlessConfig);
 
 const IndexPage: Template<TemplateRenderProps> = ({
   relativePrefixToRoot,
