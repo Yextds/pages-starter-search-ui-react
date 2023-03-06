@@ -10,7 +10,7 @@ type HeaderProps = {
 
 const Footer = ({ _site }: HeaderProps) => {
 
-  const linkDoms = _site.c_footer.map((link:any) => (
+  const linkDoms = _site.c_header_links.map((link:any) => (
     <div key={link.label}>
       <a href={link.uRL} target="_blank" rel="noreferrer">
         {link.label}
@@ -89,7 +89,7 @@ const Footer = ({ _site }: HeaderProps) => {
         <div className="container inline-flex flex-col flex-wrap items-center px-5 py-6 mx-auto sm:flex-row">
           <p className="mx-auto text-sm text-center text-black sm:text-left ">
             {" "}
-            © 2021{" "}
+            © 2023{" "}
           </p>
         </div>
       </div>

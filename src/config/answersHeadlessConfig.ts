@@ -6,8 +6,8 @@ import {
 } from "@yext/search-headless-react";
 
 export let answersHeadlessConfig: HeadlessConfig = {
-  apiKey: "ecbf37a4304b6b390687f68f697210e5",
-  experienceKey: "mgm-timber-m",
+  apiKey: "a58cce505afad9d0dc85b37d6dab8878",
+  experienceKey: "donaldson",
   locale: "en",
   sessionTrackingEnabled: true,
   endpoints: {

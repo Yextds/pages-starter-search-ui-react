@@ -12,8 +12,8 @@ type HeaderProps = {
 const Header = ({ _site }: HeaderProps) => {
   // const { t, i18n } = useTranslation();
   // console.log('i18n', i18n);
-  // const links = _site.c_header;
-  const linkDoms = _site.c_header.map((link:any) => (
+  // const links = _site.c_header_links;
+  const linkDoms = _site.c_header_links.map((link:any) => (
     <div key={link.label}>
       <a href={link.uRL} target="_blank" rel="noreferrer">
         {link.label}
