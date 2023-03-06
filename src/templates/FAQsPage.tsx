@@ -33,31 +33,28 @@ import Navigation from '../components/Navigation';
 import PageLayout from "../components/PageLayout";
 import { answersHeadlessConfig } from '../config/answersHeadlessConfig';
 
-/**
- * Not required depending on your use case.
- */
-// export const config: TemplateConfig = {
-//   stream: {
-//     $id: "FaqPage",
-//     // Specifies the exact data that each generated document will contain. This data is passed in
-//     // directly as props to the default exported function.
-//     fields: [
-//       "id",
-//       "uid",
-//       "meta",
-//       "name",
-//     ],
-//     // Defines the scope of entities that qualify for this stream.
-//     filter: {
-//       entityIds: ["siteGlobalData"] 
-//     },
-//     // The entity language profiles that documents will be generated for.
-//     localization: {
-//       locales: ["en"],
-//       primary: false,
-//     },
-//   },
-// };
+export const config: TemplateConfig = {
+  stream: {
+    $id: "faqPage",
+    // Specifies the exact data that each generated document will contain. This data is passed in
+    // directly as props to the default exported function.
+    fields: [
+      "id",
+      "uid",
+      "meta",
+      "name",
+    ],
+    // Defines the scope of entities that qualify for this stream.
+    filter: {
+      entityIds: ["global-data"] 
+    },
+    // The entity language profiles that documents will be generated for.
+    localization: {
+      locales: ["en_GB"],
+      primary: false,
+    },
+  },
+};
 
 export const getPath: GetPath<TemplateProps> = () => {
   return "/faqs";
