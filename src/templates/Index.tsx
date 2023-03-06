@@ -54,11 +54,11 @@ export const config: TemplateConfig = {
     ],
     // Defines the scope of entities that qualify for this stream.
     filter: {
-      entityIds: ["siteGlobalData"] 
+      entityIds: ["global-data"] 
     },
     // The entity language profiles that documents will be generated for.
     localization: {
-      locales: ["en"],
+      locales: ["en_GB"],
       primary: false,
     },
   },

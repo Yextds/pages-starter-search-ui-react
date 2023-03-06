@@ -12,7 +12,7 @@
     "c_header_links"
   ],
   "localization": {
-    "locales": ["en"],
+    "locales": ["en_GB"],
     "primary": false
   }
 }
